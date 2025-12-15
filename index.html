@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Gadgets | Mobile Service Center</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#020617;
+  color:#e5e7eb;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* ZOOM EFFECT */
+.carousel-item.active .hero{
+  animation:zoomMove 6s linear infinite;
+}
+@keyframes zoomMove{
+  from{ transform:scale(1); }
+  to{ transform:scale(1.08); }
+}
+
+/* MARQUEE */
+.marquee{
+  background:#020617;
+  color:#a5b4fc;
+  padding:12px;
+  font-weight:600;
+}
+
+/* GALLERY */
+.gallery img{
+  border-radius:16px;
+  transition:.4s;
+}
+.gallery img:hover{
+  transform:scale(1.06);
+  box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+
+/* VIDEO */
+.video-box{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+
+/* FOOTER ICONS */
+.social-icons a{
+  width:42px;
+  height:42px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#111827;
+  margin:0 8px;
+  color:#e5e7eb;
+  transition:.3s;
+}
+.social-icons a:hover{
+  background:#6366f1;
+  transform:translateY(-4px);
+}
+
+/* LOGO */
+.logo {
+  height:40px;
+  width:auto;
+  object-fit:contain;
+}
+.navbar-brand {
+  display:flex;
+  align-items:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75">
+<div class="container">
+  <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="#">
+    <img src="logo.png" alt="Random Gadgets Logo" class="logo">
+    RANDOM GADGETS
+  </a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#gallery">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#videos">Videos</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section id="home" class="mt-5 pt-4">
+<div id="heroCarousel"
+class="carousel slide carousel-fade"
+data-bs-ride="carousel"
+data-bs-interval="1000">
+
+<div class="carousel-inner">
+
+<!-- SLIDE 1 -->
+<div class="carousel-item active">
+<div class="hero text-center text-white"
+style="background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('sl1.jpg') center/cover;">
+<div class="container">
+<h1 class="text-5xl font-bold mb-3">Professional Mobile Repair</h1>
+<p class="text-xl mb-5">Fast • Reliable • Affordable</p>
+<div class="d-flex justify-content-center gap-3 flex-wrap">
+<a href="#contact" class="btn btn-primary btn-lg">📞 Contact</a>
+<a href="https://maps.google.com/?q=Athipattan+Street+Chennai" target="_blank"
+class="btn btn-outline-light btn-lg">📍 Location</a>
+<a href="https://wa.me/919840388088" target="_blank"
+class="btn btn-success btn-lg"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="carousel-item">
+<div class="hero text-center text-white"
+style="background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('sl2.jpg') center/cover;">
+<div class="container">
+<h1 class="text-5xl font-bold mb-3">Display & Glass Replacement</h1>
+<p class="text-xl mb-5">Original Quality Spares</p>
+<div class="d-flex justify-content-center gap-3 flex-wrap">
+<a href="#contact" class="btn btn-warning btn-lg">📞 Contact</a>
+<a href="https://maps.google.com/?q=Athipattan+Street+Chennai" target="_blank"
+class="btn btn-outline-light btn-lg">📍 Location</a>
+<a href="https://wa.me/919840388088" target="_blank"
+class="btn btn-success btn-lg"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="carousel-item">
+<div class="hero text-center text-white"
+style="background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('sl3.jpg') center/cover;">
+<div class="container">
+<h1 class="text-5xl font-bold mb-3">All Mobile Brands Supported</h1>
+<p class="text-xl mb-5">iPhone • Samsung • OnePlus • Vivo • Oppo</p>
+<div class="d-flex justify-content-center gap-3 flex-wrap">
+<a href="#contact" class="btn btn-success btn-lg">📞 Contact</a>
+<a href="https://maps.google.com/?q=Athipattan+Street+Chennai" target="_blank"
+class="btn btn-outline-light btn-lg">📍 Location</a>
+<a href="https://wa.me/919840388088" target="_blank"
+class="btn btn-success btn-lg"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+<marquee>
+iPhone • Samsung • Vivo • Oppo • Mi • OnePlus • Display Repair • Touch • Battery • Software Update
+</marquee>
+</div>
+
+<!-- ABOUT SHOP -->
+<section class="py-16 bg-black">
+  <div class="container">
+
+    <!-- About Text -->
+    <div class="row justify-content-center mb-12">
+      <div class="col-lg-10 text-center">
+        <h2 class="text-4xl font-bold mb-4">About Random Gadgets</h2>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          <strong>Random Gadgets</strong> is a trusted mobile service center in Chennai,
+          providing fast, reliable, and affordable repair solutions.
+          With years of hands-on experience, we specialize in repairing all major smartphone brands
+          using high-quality spare parts and expert technicians.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="row text-center g-4">
+
+      <div class="col-md-4">
+        <div class="p-6 rounded-xl bg-slate-900 shadow-lg">
+          <i class="fas fa-calendar-check text-4xl text-indigo-400 mb-3"></i>
+          <h3 class="text-3xl font-bold">8+</h3>
+          <p class="text-gray-400 mt-2">Years of Experience</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-6 rounded-xl bg-slate-900 shadow-lg">
+          <i class="fas fa-users text-4xl text-indigo-400 mb-3"></i>
+          <h3 class="text-3xl font-bold">15,000+</h3>
+          <p class="text-gray-400 mt-2">Happy Clients Served</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-6 rounded-xl bg-slate-900 shadow-lg">
+          <i class="fas fa-mobile-alt text-4xl text-indigo-400 mb-3"></i>
+          <h3 class="text-3xl font-bold">All Brands</h3>
+          <p class="text-gray-400 mt-2">iPhone • Samsung • OnePlus • MI</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-16 bg-slate-900">
+<div class="container">
+<h2 class="text-4xl font-bold text-center mb-10">Service Gallery</h2>
+<div class="row g-4 gallery">
+<div class="col-md-4"><img src="mb1.jpeg" class="w-100"></div>
+<div class="col-md-4"><img src="mb2.jpeg" class="w-100"></div>
+<div class="col-md-4"><img src="mb3.jpeg" class="w-100"></div>
+<div class="col-md-4"><img src="mb4.jpeg" class="w-100"></div>
+<div class="col-md-4"><img src="mb5.jpeg" class="w-100"></div>
+<div class="col-md-4"><img src="ap.jpeg" class="w-100"></div>
+</div>
+</div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="py-16 bg-black">
+<div class="container">
+<h2 class="text-4xl font-bold text-center mb-10">Repair Videos</h2>
+<div class="row g-4">
+<div class="col-md-6 video-box">
+<video class="w-100" controls><source src="vid1.mp4"></video>
+</div>
+<div class="col-md-6 video-box">
+<video class="w-100" controls><source src="vid2.mp4"></video>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-slate-900 text-center">
+<h2 class="text-4xl font-bold mb-4">Visit Random Gadgets</h2>
+<p>No.16/1, 1st Floor, Athipattan Street,<br>Mount Road, Chennai – 600002</p>
+<p class="mt-3 fw-bold">📞 98403 88088 | 73971 03880</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-center py-6">
+<div class="social-icons mb-3">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+<a href="https://wa.me/919840388088"><i class="fab fa-whatsapp"></i></a>
+</div>
+<p class="text-gray-400">© 2025 Random Gadgets. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
